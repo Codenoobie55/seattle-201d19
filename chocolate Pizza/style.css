@@ -1,0 +1,173 @@
+html{
+  text-align: center;
+}
+body{
+  margin: 0;
+  margin-top: -20px;
+  width: 100%;
+  min-width: 671px;
+}
+header{
+  width: 85%;
+  height: 100px;
+  margin: auto;
+}
+.print{
+  font-family: 'Open Sans Condensed', sans-serif;
+  float: right;
+  font-size: 10px;
+  margin-top: 5%;
+  color: #635656;
+}
+h1{
+  height: 100px;
+  /*border: 1px solid;*/
+  width: 85%;
+  margin: auto;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+#title-text::first-line{
+  color: black;
+  font-weight: bold;
+  font-size: 40px;
+}
+#title-text{
+  color: #635656;
+  font-size: 13px;
+  float: left;
+  text-align: left;
+  width: 196px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+#plogo{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 12px;
+}
+#plogo::first-line{
+  font-family: 'Yellowtail', cursive;
+  font-size: 35px;
+
+}
+#logo-text{
+  float: left;
+  width: 155px;
+  line-height: 1.2em;
+  margin-top: 4.5%;
+}
+#social-media{
+  float: right;
+  margin-top: 6%;
+}
+#seperation{
+  margin-right: 15px;
+}
+#logo{
+  float: left;
+  margin-top: 5%;
+}
+#img-break{
+  width: 85%;
+  height: 10px;
+  margin: auto;
+  margin-top: 25px;
+  background-image: url(assets/bar.jpg);
+}
+#main-pic{
+  /*background-image: url(assets/choco-pizza.png);*/
+  width: 100%;
+  text-align: center;
+}
+#big-pic {
+  /*margin-left: 8%;
+  margin-right: 90%;*/
+  width: 85%;
+}
+.instructions{
+  width: 85%;
+  margin: auto;
+  text-align: left;
+  text-indent: 35px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  color: #635656;
+}
+#steps-container{
+  color: #635656;
+  text-align: center;
+  width: 75%;
+  margin: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  padding-bottom: 3%;
+  border: 1px solid darkgrey;
+  height: 200px;
+  background-image: url(assets/list-bg.png);
+  box-shadow: 3px 4px 9px 2px #888888;
+  font-family: 'Farsan', cursive;
+  font-size: 20px;
+  line-height: 1.5em;
+  margin-top: 3%;
+}
+#first{
+  float: left;
+  text-align: left;
+}
+#second{
+  float: right;
+  text-align: left;
+}
+.pre-foot{
+  width: 85%;
+  margin: auto;
+}
+#pre-foot::first-line{
+  font-weight: bold;
+  font-size: 18px;
+}
+#pre-foot{
+  text-align: left;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.button{
+  float: right;
+  margin-top: 2%;
+  background-color: #bc7058;
+  height: 35px;
+  color: white;
+  width: 148px;
+  padding-top: 2%;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+}
+.lined-out{
+  text-decoration: line-through;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+#van{
+  float: left;
+  margin-right: 2%;
+  height: 88px;
+}
+#foot{
+  margin-top: 5%;
+  color: #635656;
+  font-size: 11px;
+}
+#foot-logo{
+  margin-top: -20px;
+}
+.post-pre-foot{
+  border: 1px solid;
+  height: 0px;
+  border-color: grey;
+  width: 85%;
+  margin: auto;
+}
+
+    Contact GitHub API Training Shop Blog About

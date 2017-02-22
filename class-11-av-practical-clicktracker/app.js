@@ -58,45 +58,6 @@ if (localStorage.getItem('totalClicks'))
     new Image('water', '/assets/water-can.jpg'),
     new Image('wine', '/assets/wine-glass.jpg'),];
 }
-//var assets = ['bag','banana','boots','chair','cthulhu','dragon','pen','scissors','shark','sweep','unicorn','usb','water','wine']
-
-//function calcPercentages() {
-//  for (var i = 0; i < assets.length; i++) {
-  //  assets[i].percentClick();
-  //}
-//}
-//function randomAssetNum(){
-  //var ranNum = Math.floor(Math.random() * assets.length);
-  //return ranNum;
-//}
-//var displayAssets = [99, 99, 99];
-//var votes = 0;
-
-//function pickAssetNums() {
-  //for (var i = 0; i < displayAssets.length; i++){
-    //var num = 0;
-    //do{
-      //var repeatNum = false;
-      //num = randomAssetNum();
-      //for (var j = 0; j < displayAssets.length; j++){
-        //if (num === displayAssets[j]) {
-          //repeatNum = true;
-        //}
-      //}
-    //}while(repeatNum);
-    //displayAssets[i] = num;
-  //}
-//}
-
-//console.log(displayImgs);
-
-//function createImgInputs(){
-  //for(var i = 0; i < displayAssets.length; i++){
-    //var assetNum = displayAssets[i];
-    //newImgInputEl(assets[Num].filePath, 'option' + (i + 1));
-    //assets[assetNum].numShown++;
-  //}
-//}
 
 var image = [];
 var img1 = document.getElementById('image1');
