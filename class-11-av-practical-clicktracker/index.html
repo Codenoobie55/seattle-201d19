@@ -3,7 +3,11 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>Busmall Client</title>
   <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Charts Demo</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  </head>
   <body>
     <div class="pageContainer">
         <div class="instructions">
@@ -24,13 +28,14 @@
           <div class="graphBox">
             <button id="result" hidden="true">Show Results</button>
             <div id="resultsBox" hidden="true">
-              <canvas id="chartCanvas" width="900" height="450"></canvas>
             </div>
             <div class="graph">
             </div>
           </div>
     </div>
     <button id="clearLS"> Clear local storage </button>
+    <canvas id="chart" width="500" height="500" ></canvas>
+  <script type="text/javascript" src="app.js"></script>
   <script src="app.js"></script>
   </body>
 </html>

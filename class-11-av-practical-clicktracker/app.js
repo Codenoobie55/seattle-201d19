@@ -1,5 +1,7 @@
 'use strict';
-function Item(itemName, filePath){
+
+var clickCountTotal = 0;
+function Image(itemName, filePath){
   this.itemName = itemName;
   this.filePath = filePath;
   this.clicks = 0;
@@ -69,6 +71,8 @@ if (localStorage.getItem('totalClicks')){
 }
 
 function handleClick(event) {
+  clickCountTotal++;
+  console.log('clickCountTotal:' + clickCountTotal);
   if (event.path[0].id === 'image1'){
     items[image[0]].clicks += 1;
   }
@@ -86,7 +90,7 @@ function handleClick(event) {
     resButton.removeAttribute('hidden');
   }
   displayImages();
-  makeClicksArray();
+  // makeClicksArray();
   localStorage.setItem('itemsArray', JSON.stringify(items));
   localStorage.setItem('totalClicks', totalClicks);
 }
@@ -163,3 +167,5 @@ function clearLS(){
 }
 clearButton = document.getElementById('clearLS');
 clearButton.addEventListener('click', clearLS);
+
+var ctx
