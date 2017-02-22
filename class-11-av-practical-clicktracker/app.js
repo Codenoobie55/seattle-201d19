@@ -1,19 +1,49 @@
 'use strict';
 
-var clickCountTotal = 0;
+function newElement(elType, elAttribute, elAttributeName, elParentId, elText){
+  var el = document.createElement(elType);
+  el.setAttribute(elAttribute, elAttributeName);
+  el.textContent = elText;
+  var parentEl = document.getElementById(elParentId);
+  parentEl.appendChild(el);
+}
+
+
+function ImgInputEl(elSrc, elId){
+  var parentEl = document.getElementById('img-selector');
+  var currentEl = document.getElementById(elId);
+  parentEl.removeChild(currentEl);
+  var el = document.createElement('input');
+  el.setAttribute('type', 'image');
+  el.setAttribute('src', elSrc);
+  el.setAttribute('id', elId);
+  el.setAttribute('class', 'imgLeftBox', 'imgCenterBox', 'imgRightBox');
+  parentEl.appendChild(el);
+}
+
+//var clickCountTotal = 0;
 function Image(itemName, filePath){
   this.itemName = itemName;
   this.filePath = filePath;
-  this.clicks = 0;
+  this.clicksShown = 0;
   this.clickCount = 0;
-  this.originalIndex = originalIndex++;
+  //this.originalIndex = originalIndex++;
 };
-if (localStorage.getItem('totalClicks')){
+
+
+Image.prototype.percentClick = function(){
+  var percentage = 100 * (this.clickCount / this.numShown);
+  this.percentage = percentage;
+};
+
+if (localStorage.getItem('totalClicks'))
+{
   var items = JSON.parse(localStorage.getItem('itemsArray'));
   console.log('items array is');
   console.log(items);
 } else {
-  var Image = [new Item('bag', '../assets/bag.jpg'),
+  var items  =
+    [new Image('bag', '../assets/bag.jpg'),
     new Image ('banana', '/assets/banana.jpg'),
     new Image('boots', '/assets/boots.jpg'),
     new Image('chair', '/assets/chair.jpg'),
@@ -28,6 +58,45 @@ if (localStorage.getItem('totalClicks')){
     new Image('water', '/assets/water-can.jpg'),
     new Image('wine', '/assets/wine-glass.jpg'),];
 }
+//var assets = ['bag','banana','boots','chair','cthulhu','dragon','pen','scissors','shark','sweep','unicorn','usb','water','wine']
+
+//function calcPercentages() {
+//  for (var i = 0; i < assets.length; i++) {
+  //  assets[i].percentClick();
+  //}
+//}
+//function randomAssetNum(){
+  //var ranNum = Math.floor(Math.random() * assets.length);
+  //return ranNum;
+//}
+//var displayAssets = [99, 99, 99];
+//var votes = 0;
+
+//function pickAssetNums() {
+  //for (var i = 0; i < displayAssets.length; i++){
+    //var num = 0;
+    //do{
+      //var repeatNum = false;
+      //num = randomAssetNum();
+      //for (var j = 0; j < displayAssets.length; j++){
+        //if (num === displayAssets[j]) {
+          //repeatNum = true;
+        //}
+      //}
+    //}while(repeatNum);
+    //displayAssets[i] = num;
+  //}
+//}
+
+//console.log(displayImgs);
+
+//function createImgInputs(){
+  //for(var i = 0; i < displayAssets.length; i++){
+    //var assetNum = displayAssets[i];
+    //newImgInputEl(assets[Num].filePath, 'option' + (i + 1));
+    //assets[assetNum].numShown++;
+  //}
+//}
 
 var image = [];
 var img1 = document.getElementById('image1');
@@ -132,7 +201,7 @@ function newChartData(){
     data.datasets[1].data.push('0');
   }
 }
-newChartData();
+//newChartData();
 var chartCanvas = document.getElementById('chartCanvas').getContext('2d');
 var chartMe = new Chart(chartCanvas).Bar(data);
 var clearsLS = document.getElementById('lsClear');
